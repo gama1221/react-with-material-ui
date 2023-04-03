@@ -1,7 +1,11 @@
 import { Button, Stack } from "@mui/material";
 
+// import SendIcon from '@mui/icons-material/SendIcon';
+import SendIcon from '@mui/icons-material/Send';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import IconButton from '@mui/icons-material';
 const MuiButton = () => {
-  return (
+  return (  
     <div>
       <Stack spacing={3}>
         
@@ -40,6 +44,26 @@ const MuiButton = () => {
             <Button variant='text' color='warning'> text warning </Button>
         </Stack>
     
+      <Stack direction='row' spacing={2} display='block'> 
+        <Button size="large" color='primary' variant='contained'>Large</Button>
+        <Button size='medium' color='primary' variant='contained'>Medium</Button>
+        <Button size="small" color='primary' variant='contained'>small</Button>
+      </Stack>
+
+      <h4>With Icons</h4>
+
+      <Stack direction='row' spacing={2}>
+        {/* <Button variant="outlined" SendOutlinedIcon={<SendOutlinedIcon />}>Send</Button> */}
+        <Button variant="contained" endIcon={<SendIcon />}>
+          Send after
+        </Button>
+
+        <Button variant="contained" startIcon={<SendOutlinedIcon />}>
+        Send before
+      </Button>
+
+      </Stack>
+
       </Stack>
     </div>
   );
